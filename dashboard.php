@@ -6,6 +6,20 @@ include ('includes/header.php');
 include ('includes/navbar.php')
   ?>
 
+  <style>
+  body {
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+  }
+  
+  h4, h5 {
+    font-weight: bold;
+  }
+</style>
+
 <div class="py-5">
   <div class="container">
     <div class="row">
