@@ -30,7 +30,7 @@ function sendemail_verify($name, $email, $verify_token)
     $mail->isHTML(true);
     $mail->Subject = 'Email Verification from Traxcn';
     $email_template = "
-            <h2>You Have Registered with Traxcn</h2>
+            <h2>You Have Registered with Tracxn</h2>
             <h5>Verify your email Address to login with the below link</h5>
             <br/><br/>
             <a href='http://localhost:8080/Registration_Form/verify-email.php?token=$verify_token'>Click Here</a>
