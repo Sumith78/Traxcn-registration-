@@ -1,5 +1,6 @@
 <?php
 $page_title = "Home Page";
+include ('authentication.php');
 include ('includes/header.php');
 include ('includes/navbar.php');
 ?>

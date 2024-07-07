@@ -28,7 +28,7 @@ function sendemail_verify($name, $email, $verify_token)
 
    
     $mail->isHTML(true);
-    $mail->Subject = 'Email Verification from Traxcn';
+    $mail->Subject = 'Email Verification from Tracxn';
     $email_template = "
             <h2>You Have Registered with Tracxn</h2>
             <h5>Verify your email Address to login with the below link</h5>
@@ -65,7 +65,7 @@ if (isset($_POST['register_btn']))
 
       if ($query_run) {
           sendemail_verify($name, $email, $verify_token);
-          $_SESSION['status'] = "Registration Successful.! Please verify your Email address";
+          $_SESSION['status'] = "Registration Successful.! Please verify your Email Address";
           header("Location: register.php");
       } else {
           $_SESSION['status'] = "Registration Failed";
