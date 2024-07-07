@@ -1,0 +1,200 @@
+WireFrame 1:Registration Form
+
+---------------------------------------
+| Logo Web Development                |
+| Home | Dashboard | Register | Login |
+---------------------------------------
+             Registration Form
+---------------------------------------
+| Name: Jyothi Kumari D              |
+---------------------------------------
+| Phone Number: 08867135689          |
+---------------------------------------
+| Email Address: jk6808768@gmail.com |
+---------------------------------------
+| Password: •••••                    |
+---------------------------------------
+| Confirm Password: •••••            |
+---------------------------------------
+| Register-button                    |
+---------------------------------------
+
+
+Wireframe 2: After Clicking Register Button
+
+---------------------------------------
+| Registration Successful.! Please    |
+| verify your Email address           |
+---------------------------------------
+
+Wireframe 3: Email Verification Message
+
+---------------------------------------
+| Subject: Email Verification from    |
+| Traxcn                              |
+---------------------------------------
+| You Have Registered with Traxcn     |
+| Verify your email Address to login  |
+| with the below link                 |
+|                                     |
+| Click Here                          |
+---------------------------------------
+
+Wireframe 4: After Verification
+
+---------------------------------------
+| Email Verified Successfully         |
+---------------------------------------
+             Login Form
+---------------------------------------
+| Email Address                       |
+---------------------------------------
+| Password                            |
+---------------------------------------
+| Did not receive your Verification   |
+| Email? Resend                       |
+---------------------------------------
+
+
+Wireframe 5: After Login with Correct Credentials
+
+---------------------------------------
+| You are Logged In Successfully      |
+---------------------------------------
+             User Dashboard
+---------------------------------------
+| Access When you are Logged IN       |
+---------------------------------------
+| Username: Sumith Kumar Singh        |
+---------------------------------------
+| Email ID: sumithrajput53361@gmail.com |
+---------------------------------------
+| Phone No: 9739170288                |
+---------------------------------------
+
+
+
+
+
+2. Describe the Functionality and Provide Details for the Engineering Team
+
+Registration Page:
+
+1. Form Inputs:
+   - Name: Text input field to capture the user's full name.
+   - Phone Number: Text input field to capture the user's phone number. This should include validation to ensure it's a valid phone number format.
+   - Email Address: Text input field to capture the user's email address. This should include validation to ensure it's a valid email format.
+   - Password: Password input field to capture the user's password. This should include validation for minimum length and complexity.
+   - Confirm Password: Password input field to confirm the user's password. This should ensure it matches the password field.
+
+2. Button:
+   - Register: Submits the form data to the server.
+
+3. Backend Processing:
+   - Validate input fields on the server-side.
+   - Check if the email is already registered.
+   - Hash the password before storing it in the database.
+   - Generate a verification token.
+   - Send a verification email to the user.
+
+4. Database:
+   - Store the user information with a default verification status of '0' (unverified).
+   - Store the verification token.
+
+After Clicking Register Button:
+
+1. Success Message:
+   - Display a message indicating that the registration was successful and instruct the user to check their email for a verification link.
+
+Verification Email:
+
+1. Email Content:
+   - Subject: "Email Verification from Traxcn"
+   - Body: Inform the user that they have registered with Traxcn and provide a link to verify their email address.
+
+2. Backend Processing:
+   - The verification link should contain the token that the backend will use to identify the user and update their verification status.
+
+After Verification:
+
+1. Verification Processing:
+   - The server will receive the verification token from the URL.
+   - Validate the token and update the user's verification status to '1' (verified).
+
+2. Message:
+   - Display a message indicating that the email was verified successfully.
+   - Provide a login form.
+
+Login Form:
+
+1. Form Inputs:
+   - Email Address: Text input field to capture the user's email.
+   - Password: Password input field to capture the user's password.
+
+2. Button:
+   - Login: Submits the form data to the server.
+
+3. Backend Processing:
+   - Validate input fields.
+   - Check if the email and password match a registered user.
+   - Check if the user's email is verified.
+   - Authenticate the user and start a session.
+
+After Login with Correct Credentials:
+
+1. Success Message:
+   - Display a message indicating successful login.
+   - Provide user dashboard access.
+
+2. User Dashboard:
+   - Display user information: Username, Email ID, and Phone No.
+
+
+
+3. Cover the Assumptions, Callouts, and Edge Cases in the Case Study
+
+Assumptions:
+
+1. Users have a stable internet connection while interacting with the forms.
+2. Users will provide valid data in the required formats.
+3. Email delivery and reception are functioning correctly.
+4. The system will handle a typical load of registration and verification requests.
+
+Callouts:
+
+1. Security: Ensure all user data is transmitted over HTTPS to protect sensitive information.
+2. Validation: Implement both client-side and server-side validation to ensure data integrity.
+3. Email Delivery: Use a reliable email service to ensure verification emails are delivered promptly.
+
+
+
+Edge Cases:
+
+1. Email Already Registered:
+   - If a user tries to register with an already registered email, display an appropriate error message.
+
+2. Incorrect Email Format:
+   - Display an error message if the email format is invalid.
+
+3. Password Mismatch:
+   - Display an error message if the password and confirm password fields do not match.
+
+4. Expired/Invalid Verification Token:
+   - Handle scenarios where the verification token is expired or invalid. Display a message and possibly provide a way to resend the verification email.
+
+5. Multiple Verification Attempts:
+   - Ensure the verification link can only be used once. Subsequent attempts should indicate that the email is already verified.
+
+6. Email Delivery Failure:
+   - Implement a retry mechanism for sending verification emails and provide the user with an option to resend the email.
+
+7. User Session Management:
+   - Ensure proper session management to prevent unauthorized access to the dashboard.
+
+8. Database Errors:
+   - Handle database connectivity issues gracefully and display user-friendly error messages.
+
+9. Form Resubmission:
+   - Prevent multiple form submissions by disabling the register button after the first click or implementing other techniques to avoid duplicate entries.
+
+By covering these points, you ensure a robust and user-friendly registration and verification process that enhances the overall user experience.
