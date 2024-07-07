@@ -9,15 +9,18 @@ include ('includes/navbar.php');
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-5">
-        <div class="alert">
-          <?php
-            if(isset($_SESSION['status']))
-            {
-              echo "<h4>".$_SESSION['status']."</h4>";
-              unset($_SESSION['status']);
-            }
+        <?php 
+        if(isset($_SESSION['status']))
+        {
           ?>
-        </div>
+          <div class="alert alert-success">
+            <h5><?=$_SESSION['status'];?></h5>
+          </div>
+          <?php 
+          unset($_SESSION['status']);
+        }
+        
+        ?>
         <div class="card shadow">
           <div class="card-header">
             <h5>Registration Form</h5>

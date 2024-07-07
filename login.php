@@ -44,6 +44,12 @@ include ('includes/navbar.php');
                 <button type="submit" name="login_now_btn" class="btn btn-primary">Login</button>
               </div>
             </form>
+
+            <hr>
+            <h5>
+              Did not receive your Verification Email?
+              <a href="resend-email-verification.php">Resend</a>
+            </h5>
           </div>
         </div>
       </div>

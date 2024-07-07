@@ -1,4 +1,6 @@
 <?php
+
+session_start();
 $page_title="Login Page";
 include('includes/header.php');
 include ('includes/navbar.php');
@@ -8,6 +10,17 @@ include ('includes/navbar.php');
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-6">
+        <?php
+        if (isset($_SESSION['status'])) {
+          ?>
+          <div class="alert alert-success">
+            <h5><?= $_SESSION['status']; ?></h5>
+          </div>
+          <?php
+          unset($_SESSION['status']);
+        }
+
+        ?>
         <div class="card">
           <div class="card-header">
             <h5>Resend Email Verification</h5>
