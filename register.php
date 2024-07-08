@@ -118,7 +118,7 @@ include ('includes/navbar.php');
                     onclick="togglePassword('password')">Show</button>
                 </div>
                 <small id="passwordHelpBlock" class="form-text text-muted" style="display: none;">
-                  
+
                 </small>
                 <div id="passwordRequirements" class="password-requirements" style="display: none;">
                   <div id="lengthCheck" class="password-requirement">Minimum eight characters</div>
@@ -136,7 +136,8 @@ include ('includes/navbar.php');
               </div>
 
               <div class="form-group">
-                <button type="submit" id="registerBtn" name="register_btn" class="btn btn-primary" disabled>Register</button>
+                <button type="submit" id="registerBtn" name="register_btn" class="btn btn-primary"
+                  disabled>Register</button>
               </div>
             </form>
           </div>

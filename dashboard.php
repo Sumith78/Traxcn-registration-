@@ -2,11 +2,11 @@
 
 include('authentication.php');
 $page_title = "Dashboard";
-include ('includes/header.php');
-include ('includes/navbar.php')
-  ?>
+include('includes/header.php');
+include('includes/navbar.php')
+?>
 
-  <style>
+<style>
   body {
     background-image: url('background.jpg');
     background-size: cover;
@@ -14,8 +14,9 @@ include ('includes/navbar.php')
     background-attachment: fixed;
     color: white;
   }
-  
-  h4, h5 {
+
+  h4,
+  h5 {
     font-weight: bold;
   }
 </style>
@@ -26,11 +27,11 @@ include ('includes/navbar.php')
       <div class="col-md-12 ">
         <?php
         if (isset($_SESSION['status'])) {
-          ?>
+        ?>
           <div class="alert alert-success">
             <h5><?= $_SESSION['status']; ?></h5>
           </div>
-          <?php
+        <?php
           unset($_SESSION['status']);
         }
         ?>
@@ -39,12 +40,12 @@ include ('includes/navbar.php')
             <h4>User Dashboard</h4>
           </div>
           <div class="card-body">
-            
-        <h4>Access When you are Logged IN</h4>
-        <hr>
-        <h5>Username:<?=$_SESSION['auth_user']['username']; ?> </h5>
-        <h5>Email ID:<?= $_SESSION['auth_user']['email']; ?> </h5>
-          <h5>Phone No:<?= $_SESSION['auth_user']['phone']; ?> </h5>
+
+            <h4>Access When you are Logged IN</h4>
+            <hr>
+            <h5>Username:<?= $_SESSION['auth_user']['username']; ?> </h5>
+            <h5>Email ID:<?= $_SESSION['auth_user']['email']; ?> </h5>
+            <h5>Phone No:<?= $_SESSION['auth_user']['phone']; ?> </h5>
           </div>
         </div>
       </div>
@@ -52,4 +53,4 @@ include ('includes/navbar.php')
   </div>
 </div>
 
-<?php include ('includes/footer.php') ?>
+<?php include('includes/footer.php') ?>

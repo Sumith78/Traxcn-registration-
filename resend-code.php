@@ -6,7 +6,6 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-// Load Composer's autoloader
 require 'vendor/autoload.php';
 function resend_email_verify($name,$email,$verify_token)
 {

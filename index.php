@@ -1,8 +1,8 @@
 <?php
 $page_title = "Home Page";
-include ('authentication.php');
-include ('includes/header.php');
-include ('includes/navbar.php');
+include('authentication.php');
+include('includes/header.php');
+include('includes/navbar.php');
 ?>
 <style>
   body {
@@ -32,4 +32,4 @@ include ('includes/navbar.php');
   </div>
 </div>
 
-<?php include ('includes/footer.php'); ?>
+<?php include('includes/footer.php'); ?>
