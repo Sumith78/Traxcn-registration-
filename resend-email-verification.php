@@ -27,7 +27,7 @@ include ('includes/navbar.php');
         <?php
         if (isset($_SESSION['status'])) {
           ?>
-          <div class="alert alert-success">
+          <div class="alert alert-success" id="statusAlert">
             <h5><?= $_SESSION['status']; ?></h5>
           </div>
           <?php
@@ -57,3 +57,4 @@ include ('includes/navbar.php');
 </div>
 
 <?php include('includes/footer.php');
+

@@ -12,7 +12,7 @@ include ('includes/header.php');
 include ('includes/navbar.php');
 ?>
 
- <style>
+<style>
   body {
     background-image: url('background.jpg');
     background-size: cover;
@@ -33,7 +33,7 @@ include ('includes/navbar.php');
         <?php
         if (isset($_SESSION['status'])) {
           ?>
-          <div class="alert alert-success">
+          <div class="alert alert-success" id="statusAlert">
             <h5><?= $_SESSION['status']; ?></h5>
           </div>
           <?php
@@ -72,3 +72,14 @@ include ('includes/navbar.php');
 </div>
 
 <?php include ('includes/footer.php') ?>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var alert = document.getElementById('statusAlert');
+    if (alert) {
+      setTimeout(function() {
+        alert.style.display = 'none';
+      }, 2000); // Hide after 2 seconds
+    }
+  });
+</script>
