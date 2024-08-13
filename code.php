@@ -23,7 +23,7 @@ function sendemail_verify($name, $email, $verify_token)
     $mail->Port = 587;
 
    
-    $mail->setFrom('sumithrajput53361@gmail.com', $name);
+    $mail->setFrom('sumithrajput53361@gmail.com', 'Tracxn');
     $mail->addAddress($email);
 
    

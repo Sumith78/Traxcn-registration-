@@ -21,7 +21,7 @@ if(isset($_POST['login_now_btn']))
       {
         $_SESSION['authenticated']=TRUE;
         $_SESSION['auth_user']=[
-            'username'=>$row['name'],
+          'username'=>$row['name'],
           'phone' => $row['phone'],
           'email' => $row['email'],
         ];
